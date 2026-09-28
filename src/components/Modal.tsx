@@ -23,7 +23,7 @@ export function Modal({ open, onClose, children, title, maxWidth = 'max-w-lg' }:
   return (
     <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-      <div className={`relative w-full ${maxWidth} max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl animate-pop`}>
+      <div className={`relative w-full ${maxWidth} max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl animate-pop`">
         {title && (
           <div className="sticky top-0 flex items-center justify-between bg-gradient-to-r from-primary-400 to-candy-pink px-6 py-4 rounded-t-3xl">
             <h2 className="text-xl font-bold text-white">{title}</h2>

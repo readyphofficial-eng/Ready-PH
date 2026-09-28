@@ -248,7 +248,6 @@ export function generateIdNumber(): string {
   return `READY-2025-${num}`;
 }
 
-// ---- App Logo (owner-uploaded) ----
 export function getAppLogo(): string {
   return lsRaw('appLogo', '');
 }
@@ -261,7 +260,6 @@ export function clearAppLogo(): void {
   localStorage.removeItem('appLogo');
 }
 
-// ---- Online Shop (replaced Freebies) ----
 export interface ShopItem {
   logo: string;
   logoImg: string;
@@ -279,7 +277,6 @@ export function setShopItems(items: ShopItem[]): void {
   lsSet('shopItems', items);
 }
 
-// ---- Partners (up to 10 slots) ----
 export interface Partner {
   name: string;
   logo: string;

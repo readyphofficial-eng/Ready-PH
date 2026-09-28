@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getThemeStickers, getTheme } from '@/lib/themes';
 
-// Deterministic pseudo-random layout so stickers don't jump on re-render
 function hashCode(str: string): number {
   let h = 0;
   for (let i = 0; i < str.length; i++) {
@@ -25,7 +24,6 @@ export function ThemeStickers() {
   const stickers = getThemeStickers(themeId);
   const cells: { emoji: string; x: number; y: number; size: number; delay: number; rot: number }[] = [];
 
-  // fixed grid of positions across the page (18 slots)
   const slots = [
     [4, 6], [24, 4], [46, 7], [68, 5], [88, 8],
     [8, 26], [30, 24], [52, 27], [74, 25], [92, 28],
